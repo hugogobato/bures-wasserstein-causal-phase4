@@ -1,0 +1,7 @@
+{
+  "seeds": 3,
+  "dimensions": [5, 10, 20, 35, 50],
+  "sample_sizes": [250, 500, 1000, 2000],
+  "additional_gate_point": [30, 1000],
+  "per_method_timeout_sec": 1800
+}

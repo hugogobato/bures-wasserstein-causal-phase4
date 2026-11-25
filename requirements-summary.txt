@@ -1,0 +1,3 @@
+-r requirements-colab.txt
+matplotlib==3.11.2
+nbformat==5.11.1

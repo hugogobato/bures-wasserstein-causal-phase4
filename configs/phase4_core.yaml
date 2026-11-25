@@ -1,0 +1,38 @@
+{
+  "seeds": 50,
+  "n": 800,
+  "dimensions": [5, 15],
+  "condition_ratios": [2, 10, 50, 150],
+  "rotation_deg": [0, 30, 60],
+  "eig_floors": [0.1, 0.0001, 0.00000001, 0],
+  "regimes": [
+    {"scenario": "recovery", "p": 5, "condition": 10, "angle": 30, "floor": 0.1},
+    {"scenario": "null", "p": 6, "condition": 7, "angle": 0, "floor": 0.1},
+    {"scenario": "commuting", "p": 5, "condition": 2, "angle": 0, "floor": 1},
+    {"scenario": "spiked", "p": 15, "condition": 80, "angle": 60, "floor": 0.00001},
+    {"scenario": "spiked", "p": 15, "condition": 80, "angle": 60, "floor": 0},
+    {"scenario": "structural", "p": 5, "condition": 50, "angle": 60, "floor": 0}
+  ],
+  "forest": {"n_trees": 200, "min_leaf_size": 12, "max_depth": 5, "subsample": 0.7, "max_features": 1.0, "max_cutpoints": 24},
+  "split": {"n_folds": 3, "anchor_fraction": 0.15, "design_fraction": 0.35},
+  "ridge_candidates": [0.000001, 0.0001, 0.01],
+  "test_queries": [[-0.75, -0.5], [-0.75, 0.5], [0, -0.5], [0, 0.5], [0.75, -0.5], [0.75, 0.5]],
+  "validation_n": 72,
+  "bootstrap_steps": 999,
+  "gates": {
+    "sqrt_gain": 0.15,
+    "log_and_elementwise_gain": 0.30,
+    "incremental_gain": 0.05,
+    "coverage_lower": 0.92,
+    "coverage_upper": 0.98,
+    "coverage_kill_low": 0.85,
+    "coverage_kill_high": 0.995,
+    "relative_mcse": 0.02,
+    "max_realistic_condition": 100,
+    "register_min_condition": 20,
+    "mechanism_min_condition": 50,
+    "min_rotation_deg": 30,
+    "register_boundary_floor": 0.0001,
+    "pivot_boundary_floor": 0.00001
+  }
+}

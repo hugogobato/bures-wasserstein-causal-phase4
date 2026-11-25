@@ -1,0 +1,12 @@
+{
+  "seeds": 50,
+  "coverage_seeds": 100,
+  "sample_sizes": [250, 500, 1000, 2000],
+  "misspec_nuisances": ["both", "e_only", "m_only", "neither"],
+  "measurement_periods": [8, 15, 50, 200, null],
+  "measurement_n": 800,
+  "measurement_p": 10,
+  "reference_draws_per_arm_stratum": 4096,
+  "coverage_p": 6,
+  "coverage_eigengaps": [0, 0.05, 0.2, 0.5, 1.0]
+}
